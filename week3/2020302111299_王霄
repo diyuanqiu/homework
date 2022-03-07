@@ -1,3 +1,4 @@
+第一次作业
 1.ping另一台计算机
 输入cmd打开命令提示符，输入ping+空格+IP地址
 C:\Users\86177>ping 10.74.191.195
@@ -21,3 +22,36 @@ C:\Users\86177>tracert www.bilibili.com
 
   1     4 ms     4 ms     5 ms  192.168.43.1
   2     *        *        *     请求超时。
+
+
+第二次作业
+任选三道题目
+P2.
+(N+P−1) L/R
+
+P4.
+a.16条(每两个路由器之间可以建立4条)
+b.8条 (4条A-B-C，4条A-D-C)
+c. 可以。A-C之间的四条：A-B-C两条、A-D-C两条。 B-D之间的两条: B-C-D两条，B-A-D两条。
+
+P5.
+a.传播时延为90min，传输时延为31012s = 6min, 端到端时延是96min
+b.传播时延为90min，传输时延为3812s = 4min48s, 端到端时延是94min48s
+
+第三次作业
+P6.
+a.
+b.HTTP协议本身是不加密的，使用tcp 80端口。HTTPS协议使用SSL加密算法，使用tcp 443端口。
+c.不行，最多两条。
+d.不可以。
+
+P12.
+from socket import *
+serverName = ’hostname’
+serverPort = 12000
+clientSocket = socket(AF_INET, SOCK_DGRAM)
+message = input(’Input lowercase sentence:’)
+clientSocket.sendto(message.encode(),(serverName, serverPort))
+modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
+print(modifiedMessage.decode())
+clientSocket.close()
