@@ -1,0 +1,16 @@
+p26
+a. 
+Yes. Because of the dredging process of BitTorrent, Bob may be selected by a node during dredging and then obtain its data.
+b. 
+Yes. He can let each host request different file blocks and then organize these file blocks into a complete file.
+
+p28
+a. 
+Unable to establish connection.
+When the TCPClient starts, it will try to establish a TCP connection. If the TCPServer does not start, the connection establishment fails.
+b. 
+No problem. 
+There is no need to establish any connection between the UDPClient and the UDPServer.
+c. 
+TCP: The TCPClient will try to establish a connection with the wrong process (or a process that doesn't exist at all), which will lead to an error.
+UDP: Unable to send information to the correct process.
